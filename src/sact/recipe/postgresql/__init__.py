@@ -160,7 +160,7 @@ class Recipe:
             proc = subprocess.Popen(cmd,
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.STDOUT)
-            proc.wait()
+            proc.communicate()
             if proc.returncode == 0:
                 # Ok, we were able to connect, the server should have started
                 break
